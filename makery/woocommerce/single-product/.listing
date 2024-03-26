@@ -1,0 +1,14 @@
+drwxr-xr-x    3 dirnewsn   dirnewsn         4096 Nov 21 15:36 .
+drwxr-xr-x   10 dirnewsn   dirnewsn         4096 Nov 29 13:35 ..
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 add-to-cart
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1005 Nov 21 15:36 meta.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn          526 Nov 21 15:36 price.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1333 Nov 21 15:36 product-image.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1378 Nov 21 15:36 product-thumbnails.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn          639 Nov 21 15:36 rating.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1090 Nov 21 15:36 related.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1713 Nov 21 15:36 review.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn           68 Nov 21 15:36 sale-flash.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn          178 Nov 21 15:36 short-description.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn          245 Nov 21 15:36 title.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1060 Nov 21 15:36 up-sells.php

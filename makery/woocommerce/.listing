@@ -1,0 +1,16 @@
+drwxr-xr-x   10 dirnewsn   dirnewsn         4096 Nov 29 13:35 .
+drwxr-xr-x    8 dirnewsn   dirnewsn         4096 Feb 11 02:48 ..
+-rwxr-xr-x    1 dirnewsn   dirnewsn         2020 Nov 21 15:36 archive-product.php
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 cart
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 checkout
+-rwxr-xr-x    1 dirnewsn   dirnewsn         2480 Nov 21 15:36 content-product.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         1072 Nov 21 15:36 content-product_cat.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         3398 Nov 21 15:36 content-single-product.php
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Feb  4 07:47 emails
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 global
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 loop
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 myaccount
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 order
+drwxr-xr-x    3 dirnewsn   dirnewsn         4096 Nov 21 15:36 single-product
+-rwxr-xr-x    1 dirnewsn   dirnewsn         3847 Nov 21 15:36 single-product-reviews.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn          274 Nov 21 15:36 single-product.php

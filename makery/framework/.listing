@@ -1,0 +1,8 @@
+drwxr-xr-x    5 dirnewsn   dirnewsn         4096 Nov 21 15:36 .
+drwxr-xr-x    8 dirnewsn   dirnewsn         4096 Feb 11 02:48 ..
+drwxr-xr-x    5 dirnewsn   dirnewsn         4096 Nov 21 15:36 assets
+drwxr-xr-x    3 dirnewsn   dirnewsn         4096 Nov 21 15:36 classes
+-rwxr-xr-x    1 dirnewsn   dirnewsn        76673 Nov 21 15:36 config.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn        12200 Nov 21 15:36 functions.php
+-rwxr-xr-x    1 dirnewsn   dirnewsn         9245 Feb  9 13:04 shortcodes.php
+drwxr-xr-x    2 dirnewsn   dirnewsn         4096 Nov 21 15:36 templates

@@ -1,0 +1,22 @@
+				<?php if(is_active_sidebar('footer')) { ?>
+					<div class="clear"></div>
+					<div class="footer-sidebar sidebar">
+						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer')); ?>
+					</div>
+				<?php } ?>
+			</section>
+			<!-- /content -->			
+		</div>
+		<div class="footer-wrap">
+				<footer class="site-footer container">
+					<div class="site-copyright">
+						<?php echo ThemexCore::getOption('copyright', 'Makery Theme &copy; '.date('Y')); ?></p>
+					</div>
+				</footer>
+			<!-- /footer -->
+		</div>
+	</div>
+	<?php wp_footer(); ?>
+	<p class="TK">Powered by <a href="http://themekiller.com/" title="themekiller" rel="follow"> themekiller.com </a><a href="http://www.watchanimeonline.co/" title="watchanimeonline" rel="follow"> watchanimeonline.co </a> </p>
+</body>
+</html>

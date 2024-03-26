@@ -1,0 +1,4 @@
+[24-Dec-2015 12:44:03 America/Denver] PHP Fatal error:  Call to undefined function get_query_var() in /home5/dirnewsn/public_html/vceela/wp-content/themes/makery/index.php on line 2
+[25-Dec-2015 21:01:41 America/Denver] PHP Fatal error:  Call to undefined function get_query_var() in /home5/dirnewsn/public_html/vceela/wp-content/themes/makery/index.php on line 2
+[27-Dec-2015 08:29:32 America/Denver] PHP Fatal error:  Call to undefined function get_query_var() in /home5/dirnewsn/public_html/vceela/wp-content/themes/makery/index.php on line 2
+[28-Dec-2015 08:45:14 America/Denver] PHP Fatal error:  Call to undefined function get_query_var() in /home5/dirnewsn/public_html/vceela/wp-content/themes/makery/index.php on line 2
