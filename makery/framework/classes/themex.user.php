@@ -919,6 +919,13 @@ class ThemexUser {
 			}
 		}
 		
+		if(empty($data['user_email'])){
+			ThemexInterface::$messages[]=__('Please fill email', 'makery');
+		}
+		if(empty($data['billing_phone'])){
+			ThemexInterface::$messages[]=__('Please fill Phone1', 'makery');
+		}
+
 		if(empty($data['user_email']) || empty($data['user_login']) || empty($data['user_password']) || empty($data['user_password_repeat'])) {
 			ThemexInterface::$messages[]=__('Please fill in all fields', 'makery');
 		} else {
@@ -949,6 +956,12 @@ class ThemexUser {
 			$user=wp_create_user($data['user_login'], $data['user_password'], $data['user_email']);			
 			$content=ThemexCore::getOption('email_registration', 'Hi, %username%! Welcome to '.get_bloginfo('name').'.');
 			wp_new_user_notification($user);
+			//var_dump($user);
+			update_user_meta($user, 'billing_phone', $data['billing_phone'] );
+			update_user_meta($user, 'user_phone2', $data['user_phone2'] );
+			update_user_meta($user, 'billing_city', $data['billing_city'] );
+			update_user_meta($user, 'billing_state', $data['billing_state'] );
+			update_user_meta($user, 'billing_country', $data['billing_country'] );
 			
 			$keywords=array(
 				'username' => $data['user_login'],
@@ -977,6 +990,14 @@ class ThemexUser {
 				}
 				
 				$keywords['link']=$link.'activate='.urlencode($activation_key).'&user='.$user->ID;
+			} elseif( $data['user_roles']=='buyers') {
+				$object=new WP_User($user);
+				$object->remove_role(get_option('default_role'));
+				$object->add_role('customer');
+				
+				wp_signon($data, false);
+				$subject=__('Registration Complete', 'makery');
+				ThemexInterface::$messages[]='<a href="'.get_author_posts_url($user).'" class="redirect"></a>';
 			} else {
 				$object=new WP_User($user);
 				$object->remove_role(get_option('default_role'));
@@ -1018,7 +1039,15 @@ class ThemexUser {
 		}
 		
 		if(empty(ThemexInterface::$messages)) {
-			ThemexInterface::$messages[]='<a href="'.get_author_posts_url($user->ID).'" class="redirect"></a>';
+			
+			$userr = get_user_by('id', $user->ID);
+			//ThemexInterface::$messages[]=var_dump($userr->roles[0]);
+			if($userr->roles[0] == 'customer'):
+				ThemexInterface::$messages[]='<a href="/my-account/" class="redirect"></a>';
+			else:
+				ThemexInterface::$messages[]='<a href="'.get_author_posts_url($user->ID).'" class="redirect"></a>';
+			endif;
+
 		} else {
 			wp_logout();
 		}

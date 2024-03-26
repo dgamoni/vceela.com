@@ -28,6 +28,8 @@ var themexElements={
 
 jQuery(document).ready(function($) {
 
+console.log('interface-js');
+
 	//Options
 	$(themexElements.page).find('form').submit(function() {
 		return false;

@@ -24,6 +24,8 @@ var themeElements = {
 //DOM Loaded
 jQuery(document).ready(function($) {
 
+console.log('general-js');
+
 	//Menu
 	$(themeElements.menu).find('li').hoverIntent(
 		function() {
@@ -73,7 +75,7 @@ jQuery(document).ready(function($) {
 			});
 		});
 	}
-	
+	console.log('initselect');
 	initSelect();
 	
 	//Toggles

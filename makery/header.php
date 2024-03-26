@@ -89,7 +89,16 @@
 							<a href="<?php echo wp_logout_url(SITE_URL); ?>" class=""><?php _e('Sign Out','makery'); ?></a>
 						</div>
 						<div style="float:right;width:auto;padding-left:10px;padding-right:10px;">
-							<a href="<?php echo ThemexUser::$data['current']['links']['profile']['url']; ?>" class="primary"><?php _e('My Account','makery'); ?></a>
+							<?php 
+								$current_user = wp_get_current_user(); 
+								//var_dump($current_user->roles[0]);
+							?>
+							<?php if($current_user->roles[0] == 'customer'): ?>
+								<a href="/my-account/" class="primary"><?php _e('My Account','makery'); ?></a>
+							<?php else: ?>
+								<a href="<?php echo ThemexUser::$data['current']['links']['profile']['url']; ?>" class="primary"><?php _e('My Account','makery'); ?></a>
+							<?php endif; ?>
+
 						</div>
 					<?php } else { ?>
 						<div style="float:right;width:auto;padding-left:5px;padding-right:5px">
@@ -204,11 +213,11 @@ yoast_breadcrumb();
 	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-			<div class="item active" style="margin: auto;  width: 100%; height: 100%">
-				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/buy-directly-banner.jpg" style=" margin: auto;  width: 100%; height: 100%"  alt="" />
+			<div class="item active" style="margin: auto;  width: 100%; ">
+				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/buy-directly-banner.jpg" style=" margin: auto;  width: 100%; "  alt="" />
 			</div>
-			<div class="item" style=" margin: auto;  width: 100%; height: 100%">
-				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/camel-skin-banner.jpg" style=" margin: auto;  width: 100%; height: 100%" alt="" />
+			<div class="item" style=" margin: auto;  width: 100%; ">
+				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/camel-skin-banner.jpg" style=" margin: auto;  width: 100%; " alt="" />
                 <!--<div style="float:left;margin-top:800px; ">
 				<a  class="carousel-banner-button punjab-banner-button" href="http://www.vceela.com/shop/naqash/" role="button" >VISIT SHOP</a>-
                 </div>-->

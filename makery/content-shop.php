@@ -62,7 +62,7 @@
 
 	</div>
 
-	<footer class="shop-footer"  style="height:140px;">
+	<footer class="shop-footer"  style="">
 
 		<div class="shop-author clearfix">
 

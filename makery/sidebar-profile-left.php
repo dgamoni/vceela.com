@@ -82,24 +82,38 @@
 			<?php } ?>
 		</div>
 	</div>
+	<?php $us = wp_get_current_user();
+	//var_dump($us->roles[0] ); ?>
 	<div class="profile-menu sidebar-widget">
 		<ul>
 			<?php foreach(ThemexUser::$data['current']['links'] as $link) { ?>
-			<li class="<?php if($link['current']) { ?>current<?php } ?> <?php if(!empty($link['child'])) { ?>parent<?php } ?> clearfix">
-				<a href="<?php echo esc_url($link['url']); ?>"><?php echo $link['name']; ?></a>
-				<?php if(isset($link['child']) && !empty($link['child'])) { ?>
-				<ul>
-					<?php foreach($link['child'] as $key => $child) { ?>
-					<li class="<?php if($child['current']) { ?>current<?php } ?> clearfix">
-						<a href="<?php echo esc_url($child['url']); ?>"><?php echo $child['name']; ?></a>						
-						<?php if($key=='orders' && !empty(ThemexShop::$data['handlers'])) { ?>
-						<span><?php echo ThemexShop::$data['handlers']; ?></span>
+				<?php if( ( current_user_can('customer') && $link['name'] =='My Shop') || ( current_user_can('customer') && $link['name'] =='My Earnings') ):
+					 //echo 'customer'.$link['name'];
+					 else : 
+							 //var_dump($link['name']);
+							 //var_dump($link['url']);
+					 		//var_dump($link['child']);
+							 if( current_user_can('customer') && $link['name']=='My Profile' ){
+							 	$link['url'] ='/profile/';
+							 }
+							  ?>			
+					<li class="<?php if($link['current'] || current_user_can('customer')) { ?>current<?php } ?> <?php if(!empty($link['child'])) { ?>parent<?php } ?> clearfix">
+						<a href="<?php echo esc_url($link['url']); ?>"><?php echo $link['name']; ?></a>
+						<?php if(isset($link['child']) && !empty($link['child'])) { ?>
+						<ul>
+							<?php foreach($link['child'] as $key => $child) { ?>
+									<li class="<?php if($child['current']) { ?>current<?php } ?> clearfix">
+										<a href="<?php echo esc_url($child['url']); ?>"><?php echo $child['name']; ?></a>						
+										<?php if($key=='orders' && !empty(ThemexShop::$data['handlers'])) { ?>
+										<span><?php echo ThemexShop::$data['handlers']; ?></span>
+										<?php } ?>
+									</li>
+
+							<?php } ?>
+						</ul>
 						<?php } ?>
 					</li>
-					<?php } ?>
-				</ul>
-				<?php } ?>
-			</li>
+				<?php endif; ?>
 			<?php } ?>
 		</ul>
 	</div>	

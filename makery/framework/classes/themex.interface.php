@@ -170,10 +170,14 @@ class ThemexInterface {
 						
 						wp_redirect($redirect);
 						exit();
+					// } else if(is_user_logged_in() && wp_get_current_user()->roles[0] =='customer' ) {
+					// 	wp_redirect(get_author_posts_url(get_current_user_id()));
+					// 	exit();
 					} else if(!$rule['private'] && is_user_logged_in()) {
 						wp_redirect(get_author_posts_url(get_current_user_id()));
 						exit();
-					}
+					} 
+
 				}
 				
 				$path=THEME_PATH;

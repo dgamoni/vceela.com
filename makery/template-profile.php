@@ -5,6 +5,7 @@ Template Name: Profile
 ?>
 <?php get_header(); ?>
 <?php get_sidebar('profile-left'); ?>
+
 <div class="column sixcol">
 	<div class="element-title indented">
 		<h1><?php _e('My Profile', 'makery'); ?></h1>

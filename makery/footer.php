@@ -7,7 +7,7 @@
 			</section>
 			<!-- /content -->			
 		</div>
-                <?php  if (is_shop() ) return; ?>
+                <?php  if (is_shop() && !is_search() ) return; ?>
 		<div class="footer-style">
 			<div style="padding-left:5px;width:100%;"><img src="http://www.vceela.com/wp-content/uploads/2016/10/full_bar.png"></div>
 			<div class="footer-wrap">
@@ -23,7 +23,7 @@
                             <li><a href="http://www.vceela.com/terms-and-conditions/" style="color:rgb(0,0,0)">Terms and Conditions</a></li>
                             <li><a href="http://www.vceela.com/privacy-policy/" style="color:rgb(0,0,0)">Privacy Policy</a></li>
                             <li><a href="http://www.vceela.com/contact-us/" style="color:rgb(0,0,0)">Contact Us</a></li>
-                            <li><a href="http://www.vceela.com/partners/" style="color:rgb(0,0,0)">Our Partners</a></li>
+                            <!-- <li><a href="http://www.vceela.com/partners/" style="color:rgb(0,0,0)">Our Partners</a></li> -->
                         </ul>
                     </div>
                     <div class="bottom-menu-2">
