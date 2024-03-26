@@ -1,1 +1,0 @@
-[10-Jul-2017 13:15:30 CST6CDT] PHP Fatal error:  Call to undefined function get_query_var() in /home/vceela62/public_html/wp-content/themes/makery/index.php on line 3

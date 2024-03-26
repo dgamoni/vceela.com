@@ -14,7 +14,7 @@ Tags: blue, white, responsive-layout, custom-background, custom-colors, theme-op
 
 /*--------------------CSS Structure-------------------
 
-1. RESET/GLOBAL
+1. RESET/GLOBALG
 		Global Styles
 		Form Elements
 		Misc Styles
@@ -2137,12 +2137,23 @@ ul.error li:before {
     padding:0 100px;
     /*max-width:996px;*/
 }
-
+/*
+.menucontainer {
+    position:relative;
+    margin:0 auto;
+    padding:0px 0px 35px 0px;
+    /*max-width:996px;
+}
+*/
 .menucontainer {
     position:relative;
     margin:0 auto;
     padding:0px 0px 35px 0px;
     /*max-width:996px;*/
+    max-width:1130px;
+    /*align-content:center;*/
+    /*max-width:1030px;*/
+    /*padding-left: -40px;*/
 }
 
 .frontpagecontainer {
@@ -2479,12 +2490,13 @@ color:#000
 /*-------------------------------- Footer -------------------------------*/
 
 .footer-wrap {
-    position:absolute;
+    position:relative;
     right:0;
     left:0;
     bottom:0;
     width:100%;
-    margin-top: -3em;
+    /*margin-top: -3em;*/
+    margin-top: 0;
     padding: 3em 0;
     color: #000;
     border-right-width: 0;
@@ -2499,10 +2511,11 @@ color:#000
     top:0;
     right:0;
     bottom:0;
-    left:0;
+    left:200;
     display:block;
     width:100%;
-    content:" ";
+    /*content:" ";*/
+    content: inherit;
     background:rgba(0,0,0,0.35);
 }
 
@@ -2958,6 +2971,8 @@ color:#000
     vertical-align:top;
 }
 
+/*.product-image-wrap { border: 1px solid #ccc;}*/
+
 .item-related,
 .item-reviews {
     margin-top:0em;
@@ -3066,6 +3081,11 @@ color:#000
 .item-sale img {
     display:block;
     margin:8px auto;
+}
+
+.percentage {
+	color: white;
+	line-height: 30px;
 }
 
 .items-toolbar {
@@ -3406,6 +3426,8 @@ color:#000
     border:1px solid #dfdfdf;
     background:#fff;
 }
+
+.widget.widget_product_search {border:none;}
 
 .widget.wrapped {
     padding:1.5em 20px;
@@ -3908,9 +3930,12 @@ color:#000
 }
 
 .woocommerce form .form-row .input-checkbox {
-    float:none!important;
+    /*float:none!important;
     width:auto!important;
-    margin-right:2px;
+    margin-right:2px;*/
+    position: relative;
+	float: left;
+	margin-top: 6px;
 }
 
 .woocommerce .checkout label.checkbox {
@@ -4820,7 +4845,7 @@ searchform {
 }*/
 #cssmenu > ul > li > a {
   color: #000000;
-  padding: 15px 20px;
+  padding: 15px 17px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -5284,7 +5309,7 @@ searchform {
 
 .footer-style {
 	position: relative;
-	height: 375px;
+	/*height: 375px;*/
 	clear: both;
 }
 

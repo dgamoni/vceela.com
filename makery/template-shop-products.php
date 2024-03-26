@@ -5,7 +5,7 @@ Template Name: Shop Products
 ?>
 <?php get_header(); ?>
 <?php get_sidebar('profile-left'); ?>
-<div class="column sixcol">
+<div class="column eightcol">
 	<div class="element-title indented">
 		<h1><?php _e('Shop Items', 'makery'); ?></h1>
 	</div>
@@ -20,6 +20,7 @@ Template Name: Shop Products
 	<table class="profile-table">
 		<thead>
 			<tr>
+				<th><?php _e('Image', 'makery'); ?></th>
 				<th><?php _e('Name', 'makery'); ?></th>
 				<th><?php _e('Stock', 'makery'); ?></th>
 				<th><?php _e('Price', 'makery'); ?></th>
@@ -30,8 +31,10 @@ Template Name: Shop Products
 			<?php 
 			foreach(ThemexShop::$data['products'] as $ID) {
 			$product=ThemexWoo::getProduct($ID);
+			$image = wp_get_attachment_image_url(get_post_thumbnail_id( $product['ID'] ), array(100,100));
 			?>
 			<tr>
+				<td style="padding:2px;"><img style="width: 80px;" src="<?php echo $image; ?>"></td>
 				<td style="padding:4px;">
 					<a href="<?php echo ThemexCore::getURL('shop-product', $product['ID']); ?>" <?php if($product['status']=='draft') { ?>class="secondary"<?php } ?>>
 						<?php 

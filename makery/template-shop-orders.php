@@ -5,7 +5,7 @@ Template Name: Shop Orders
 ?>
 <?php get_header(); ?>
 <?php get_sidebar('profile-left'); ?>
-<div class="column sixcol">
+<div class="column eightcol">
 	<div class="element-title indented">
 		<h1><?php _e('Shop Orders', 'makery'); ?></h1>
 	</div>
@@ -20,6 +20,7 @@ Template Name: Shop Orders
 	<table>
 		<thead>
 			<tr>
+				<th><?php _e('Image', 'makery'); ?></th>
 				<th>&#8470;</th>
 				<th><?php _e('Date', 'makery'); ?></th>
 				<th><?php _e('Status', 'makery'); ?></th>
@@ -30,9 +31,16 @@ Template Name: Shop Orders
 		<tbody>
 			<?php 
 			foreach(ThemexShop::$data['orders'] as $ID) {
-			$order=ThemexWoo::getOrder($ID);
+				$order=ThemexWoo::getOrder($ID);
+				$myorder = new WC_Order($order['ID'] );
+				$items = $myorder->get_items();
+				foreach ( $items as $key => $item ) {
+					$product_id = $item['product_id'];
+				}
+				$image = wp_get_attachment_image_url(get_post_thumbnail_id( $product_id ), array(100,100));
 			?>
 			<tr>
+				<td style="padding:2px;"><img style="width: 80px;" src="<?php echo $image; ?>"></td>
 				<td style="padding:4px;">
 					<a href="<?php echo ThemexCore::getURL('shop-order', $order['ID']); ?>">
 						<?php echo $order['number']; ?>

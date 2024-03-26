@@ -209,9 +209,9 @@ yoast_breadcrumb();
 			</div>
 			<div class="item" style=" margin: auto;  width: 100%; height: 100%">
 				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/camel-skin-banner.jpg" style=" margin: auto;  width: 100%; height: 100%" alt="" />
-                <div style="float:left;margin-top:800px; ">
-				<!--a  class="carousel-banner-button punjab-banner-button" href="http://www.vceela.com/shop/naqash/" role="button" >VISIT SHOP</a-->
-                </div>
+                <!--<div style="float:left;margin-top:800px; ">
+				<a  class="carousel-banner-button punjab-banner-button" href="http://www.vceela.com/shop/naqash/" role="button" >VISIT SHOP</a>-
+                </div>-->
 			</div>
 			<!--div class="item" style=" margin: auto;  width: 100%; height: 100%">
 				<img class="aligncenterfullwidth" src="http://www.vceela.com/wp-content/uploads/2016/10/Pakistan-Handicraft.jpg" style=" margin: auto;  width: 100%; height: 100%" alt="" />

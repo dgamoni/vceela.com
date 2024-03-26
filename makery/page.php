@@ -150,7 +150,8 @@ echo '</div>';
 
     <?php
 	
-	$ids = array(9087, 5080, 5077,5115,9105);
+    $ids = array(9597, 6064, 8408, 9708);
+	//$ids = array(9597, 5080, 5077,5115,9105);
 	//$loop = query_posts(array('post__in' => $ids,'post_type' => 'product','product_cat' => 'handmade bags', 'orderby' => 'rand' ));
         //$args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'handmade bags', 'orderby' => 'rand' );
 	$args = array( 'post__in' => $ids,'post_type' => 'product','orderby' => 'rand' );
@@ -222,7 +223,8 @@ echo '</div>';
 
 	
     <?php
-	$ids = array(2005, 3962, 3968, 2233,9077);
+    $ids = array(3674, 4232, 4248, 9805);
+	//$ids = array(2005, 3962, 3968, 2233,9077);
 	$args = array( 'post__in' => $ids,'post_type' => 'product', 'orderby' => 'rand' );
         $loop = new WP_Query( $args );
 		echo '<div class="mainpage_product_div container">';
@@ -289,7 +291,8 @@ echo '</div>';
 	
 
 	<?php
-	$ids = array(2174, 3676, 3674, 4136,2035);
+//	$ids = array(2174, 3676, 3674, 4136,2035);
+    $ids = array(9786, 9821, 5208, 5195);
 	$args = array( 'post__in' => $ids,'post_type' => 'product', 'orderby' => 'rand' );
         $loop = new WP_Query( $args );
 		echo '<div class="mainpage_product_div container">';
@@ -357,7 +360,8 @@ echo '</div>';
 
 
 	<?php
-	$ids = array(4842, 3794 , 4333, 4824);
+	//$ids = array(4842, 3794 , 4333, 4824);
+    $ids = array(8588, 8522, 8463, 10282);
 	$args = array( 'post__in' => $ids,'post_type' => 'product', 'orderby' => 'rand' );
         $loop = new WP_Query( $args );
 		echo '<div class="mainpage_product_div container">';
@@ -458,7 +462,8 @@ echo '</div>';
 	<div style="float:left;width:100%;"><img src="http://www.vceela.com/wp-content/uploads/2016/10/instagram_bar.png"></div>
 <div class="container">
 <div class="row">
-<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5951f8aaf18153a588e17e7362373658.html" id="lightwidget_5951f8aaf1" name="lightwidget_5951f8aaf1"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+<!-- LightWidget WIDGET --><!--<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5951f8aaf18153a588e17e7362373658.html" id="lightwidget_5951f8aaf1" name="lightwidget_5951f8aaf1"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>-->
+<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/b6be5873e7125aa4a1816f781e4233e3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
 
 </div></div>
